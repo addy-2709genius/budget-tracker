@@ -55,7 +55,7 @@ export const login = async (req, res) => {
     // Find user
     const [users] = await pool.execute('SELECT * FROM users WHERE email = ?', [email])
     if (users.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' })
+      return res.status(401).json({ error: 'User does not exist. Please sign up first.' })
     }
 
     const user = users[0]
@@ -63,7 +63,7 @@ export const login = async (req, res) => {
     // Verify password
     const isValidPassword = await bcrypt.compare(password, user.password)
     if (!isValidPassword) {
-      return res.status(401).json({ error: 'Invalid credentials' })
+      return res.status(401).json({ error: 'Invalid password. Please try again.' })
     }
 
     // Generate token
