@@ -1,0 +1,87 @@
+export const mockCategories = [
+  { id: 'cat-1', name: 'Housing', type: 'expense', color: '#4C6EF5' },
+  { id: 'cat-2', name: 'Groceries', type: 'expense', color: '#F06595' },
+  { id: 'cat-3', name: 'Transportation', type: 'expense', color: '#FF922B' },
+  { id: 'cat-4', name: 'Utilities', type: 'expense', color: '#12B886' },
+  { id: 'cat-5', name: 'Entertainment', type: 'expense', color: '#845EF7' },
+  { id: 'cat-6', name: 'Salary', type: 'income', color: '#228BE6' },
+  { id: 'cat-7', name: 'Freelance', type: 'income', color: '#40C057' },
+]
+
+export const mockTransactions = [
+  {
+    id: 'txn-1',
+    type: 'income',
+    amount: 5000,
+    date: '2025-10-05',
+    categoryId: 'cat-6',
+    categoryName: 'Salary',
+    account: 'Checking',
+    notes: 'Monthly salary',
+    isRecurring: true,
+  },
+  {
+    id: 'txn-2',
+    type: 'expense',
+    amount: 1500,
+    date: '2025-10-08',
+    categoryId: 'cat-1',
+    categoryName: 'Housing',
+    account: 'Checking',
+    notes: 'Rent payment',
+    isRecurring: true,
+  },
+  {
+    id: 'txn-3',
+    type: 'expense',
+    amount: 400,
+    date: '2025-10-10',
+    categoryId: 'cat-2',
+    categoryName: 'Groceries',
+    account: 'Credit Card',
+    notes: 'Weekly groceries',
+    isRecurring: false,
+  },
+  {
+    id: 'txn-4',
+    type: 'expense',
+    amount: 220,
+    date: '2025-09-22',
+    categoryId: 'cat-3',
+    categoryName: 'Transportation',
+    account: 'Credit Card',
+    notes: 'Gas & metro',
+    isRecurring: false,
+  },
+  {
+    id: 'txn-5',
+    type: 'income',
+    amount: 1200,
+    date: '2025-09-15',
+    categoryId: 'cat-7',
+    categoryName: 'Freelance',
+    account: 'Savings',
+    notes: 'Consulting project',
+    isRecurring: false,
+  },
+]
+
+export const mockGoals = [
+  {
+    id: 'goal-1',
+    title: 'Emergency Fund',
+    targetAmount: 100000,
+    currentAmount: 35000,
+    targetDate: '2026-06-01',
+    description: 'Save for emergency expenses',
+  },
+  {
+    id: 'goal-2',
+    title: 'Vacation to Goa',
+    targetAmount: 50000,
+    currentAmount: 12000,
+    targetDate: '2026-01-15',
+    description: 'Family vacation fund',
+  },
+]
+

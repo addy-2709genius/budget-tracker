@@ -1,0 +1,15 @@
+# Copy this content to create your .env file
+# Run: cp ENV_TEMPLATE.txt .env
+# Then edit .env with your actual MySQL password
+
+PORT=4000
+NODE_ENV=development
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=YOUR_MYSQL_PASSWORD_HERE
+DB_NAME=budget_tracker
+DB_PORT=3306
+
+JWT_SECRET=budget_tracker_super_secret_jwt_key_change_in_production_2025
+
