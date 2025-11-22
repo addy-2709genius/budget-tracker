@@ -19,6 +19,26 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// Root route - API info
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'Budget Tracker API is running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      auth: {
+        register: 'POST /api/auth/register',
+        login: 'POST /api/auth/login'
+      },
+      categories: 'GET, POST, PUT, DELETE /api/categories',
+      transactions: 'GET, POST, PUT, DELETE /api/transactions',
+      summary: 'GET /api/transactions/summary',
+      goals: 'GET, POST, PUT, DELETE /api/goals'
+    }
+  })
+})
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Budget Tracker API is running' })
